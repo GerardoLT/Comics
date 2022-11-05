@@ -57,11 +57,8 @@
         <TABLE ALIGN="left">
       
           <tr>
-            <td> <img src="https://th.bing.com/th/id/OIP.m1uNbuawlrLf6-pQgQdqVgHaEH?w=323&h=180&c=7&r=0&o=5&pid=1.7"
-              height="80" width="250"
-              
-
-              >
+            <td> 
+              <img src="img/comics.jpg" height="80" width="250">
             </td>
            
             <td> <p >----------------------</p></td>
