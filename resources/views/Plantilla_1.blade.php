@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plantilla </title>
 
-    <link href="css/cat_cards.css" rel="stylesheet" type="text/css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
       header {
@@ -59,11 +57,7 @@
         <TABLE ALIGN="left">
       
           <tr>
-            <td> <img src="https://th.bing.com/th/id/OIP.m1uNbuawlrLf6-pQgQdqVgHaEH?w=323&h=180&c=7&r=0&o=5&pid=1.7"
-              height="80" width="250"
-              
 
-              >
             </td>
            
             <td> <p >----------------------</p></td>
@@ -89,7 +83,6 @@
 
   <body>
 
-      @yield('Contenido')
 
 
     
