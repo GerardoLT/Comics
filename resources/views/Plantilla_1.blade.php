@@ -57,8 +57,7 @@
         <TABLE ALIGN="left">
       
           <tr>
-            <td> 
-              <img src="img/comics.jpg" height="80" width="250">
+
             </td>
            
             <td> <p >----------------------</p></td>
@@ -83,7 +82,6 @@
 </header>
 
   <body>
-
 
 
 
