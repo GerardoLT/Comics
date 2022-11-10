@@ -11,20 +11,15 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+
 <!-- tablas -->
-<div class="container col-md-10" style="background-color: gray">
+<div class="container col-md-8 table table-hover" >
   <h1>Proveedores</h1>
     <table style="align-content: center">
      
 
        
       <tr>
-            <th>
-                <p style="color: grey">----------</p>      
-            </th>
             <th>
                 <table class="table">
                     <tr>
@@ -85,9 +80,7 @@
         
        
             </th>
-            <th>
-                <p style="color: grey">----------</p>      
-            </th>
+            
             <th>
                 <table class="table table-success table-striped"  >
    

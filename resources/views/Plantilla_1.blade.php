@@ -28,7 +28,7 @@
 
   <style>
     header {
-      background: rgb(96, 41, 40);
+      background: linear-gradient(to right, rgba(96,41,40.1), rgba(163, 73, 31,1));
       width: 100%;
       z-index: 100;
     }
@@ -49,7 +49,7 @@
     }
 
     .Plantilla {
-      background: rgb(96, 41, 40);
+      background: linear-gradient(to right, rgba(96,41,40.1), rgba(163, 73, 31,1));
       padding-left: 10%;
       width: 100%;
 
@@ -94,44 +94,29 @@
     <TABLE ALIGN="left" class="Plantilla">
 
       <tr>
-
         <td> <a href="/"> <img src="img\comics.jpg" height="80" width="250"></a>
-
-        </td>
-
+        </td>    
         <td>
-          <p>----------------------</p>
         </td>
-
         <td> <input type="text"></td>
         <td> <button>Buscar</button></td>
         <td>
-          <p>------------------</p>
         </td>
         <td> <a href="4">Carrito</a> </td>
       </tr>
-      <tr>
-        <td>
-          <p>----------------------</p>
-        </td>
-        <td>
-          <p>-------------</p>
-        </td>
+      <tr class="col-lg-6">
 
         <td> <a href="2">Catalogo</a></td>
         <td> <a href="VentasArticulos">Ventas</a></td>
         <td> <a href="1">Provedores</a></td>
         <td> <a href="3">Pedidos</a></td>
-
-        <td>
-          <p>------------------</p>
-        </td>
+        <td> <a href="RegistrarTrabajador">Alta Trabajador</a></td>
 
       </tr>
     </TABLE>
   </header>
 
-<body style="background: linear-gradient(to right, rgba(96,41,40.1), rgba(163, 73, 31,1))">
+<body>
   @yield('Contenido')
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
