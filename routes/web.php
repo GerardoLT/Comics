@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ControladorComics;
+use App\Http\Controllers\controllerLogin;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,8 +28,6 @@ Route::view('31','Alta_Pedidos');
 Route::view('32','Editar_Pedidos');
 Route::view('6','catalogo2');
 
-
-
 // Route::get('/', function () {
 //     return view('Plantilla_1');
 // });
@@ -44,8 +43,6 @@ Route::post('PostLogin',[controllerLogin::class, 'PostLogin'])->name('Loging');
 Route::get('/',function(){
     return view('Login');
 })->name('log');
-
-
 
 Route::get('VentasArticulos',function(){
     return view('VentasArticulos');

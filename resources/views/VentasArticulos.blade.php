@@ -5,12 +5,13 @@
 @section('Contenido')
 
 <!-- Topic Cards -->
-<div id="cards_landscape_wrap-2">
-    <div class="text-center">
+<div class="text-center">
         <br>
         <a class="btn btn-primary active ml-4" href="{{ route('VentArticulos') }}"><i class="fas fa-magic mr-1"></i> Articulos</a>
         <a class="btn btn-default" href="{{ route('VentComics') }}">Comics <i class="fas fa-magic ml-1"></i></a>
     </div>
+<div id="cards_landscape_wrap-2">
+    
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -33,11 +34,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -63,11 +64,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -92,11 +93,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -121,11 +122,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -154,11 +155,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -184,11 +185,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -213,11 +214,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -242,11 +243,11 @@
                                 <span class="material-icons mdc-fab__icon">delete</span>
                                 <div class="mdc-fab__touch"></div>
                             </button>
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
+                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
                                 <div class="mdc-fab__ripple"></div>
                                 <span class="material-icons mdc-fab__icon">edit</span>
                                 <div class="mdc-fab__touch"></div>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -254,11 +255,11 @@
         </div>
     </div>
     <div class="text-center">
-        <button class="mdc-fab mdc-fab--extended">
+        <a type="button" href="4" class="mdc-fab mdc-fab--extended">
             <div class="mdc-fab__ripple"></div>
             <span class="material-icons mdc-fab__icon">shopping_cart</span>
             <span class="mdc-fab__label">Add to cart</span>
-        </button>
+        </a>
     </div>
 </div>
 

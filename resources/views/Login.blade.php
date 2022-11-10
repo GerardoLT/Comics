@@ -1,12 +1,10 @@
 @extends('Plantilla_1')
-@section('Estilos')
-<link href="css/login.css" rel="stylesheet" type="text/css">
-@stop
+
 
 @section('Contenido')
 
-
-<section class="vh-100 gradient-custom">
+<br>
+<section class="mt-4 vh-100 gradient-custom">
     <form action="PostLogin" method="post">
         @csrf
         <div class="container py-5 h-100">
