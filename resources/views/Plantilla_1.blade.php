@@ -58,11 +58,7 @@
         <TABLE ALIGN="left">
       
           <tr>
-            <td> <img src="https://th.bing.com/th/id/OIP.m1uNbuawlrLf6-pQgQdqVgHaEH?w=323&h=180&c=7&r=0&o=5&pid=1.7"
-              height="80" width="250"
-              
 
-              >
             </td>
            
             <td> <p >----------------------</p></td>
@@ -87,9 +83,6 @@
 </header>
 
   <body>
-
-
- 
 
     
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

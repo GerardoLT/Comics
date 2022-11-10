@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('Plantilla_1');
 });
+
+Route::get('catalogos',function(){
+    return view('catalogos');
+})->name('cat');
