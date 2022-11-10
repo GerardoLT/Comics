@@ -1,6 +1,6 @@
 @extends('Plantilla_1')
 
-@section('contenido')
+@section('Contenido')
 <br>
 <br>
 <br>
@@ -14,50 +14,52 @@
             Comics
         </div>
         <div class="card-body">
-            <form method="post" action="#">
+            <form method="post" action="Comics2">
                 @csrf 
                 <p class="text-start"><label class="fs-4 fw-bolder">Nombre:</label></p>
-                <input type="text" name="txtNombre" class="form-control">
+                <input type="text" name="Nombre" class="form-control" value="{{old("Nombre")}}">
+                <p class="text-danger">{{ $errors->first('Nombre') }}</p>
             <div class="form-row">
                 <div class="col">
                 <p class="text-start"><label class="fs-4 fw-bolder">Edicion:</label></p>
-                    <input type="text" class="form-control" name="txtEdicion">
+                <input type="text" name="Edicion" class="form-control" value="{{old("Edicion")}}">
+                <p class="text-danger">{{ $errors->first('Edicion') }}</p>
                 </div>
                 <div class="col">
                 <p class="text-start"><label class="fs-4 fw-bolder">Precio Compra:</label></p>
-                    <input type="text" class="form-control" name="txtCompra">
+                <input type="text" name="Precio_compra" class="form-control" value="{{old("Precio_compra")}}">
+                <p class="text-danger">{{ $errors->first('Precio_compra') }}</p>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col">
                     <p class="text-start"><label class="fs-4 fw-bolder">Compañia:</label></p>
-                    <input type="text" class="form-control" name="txtCompa">
+                    <input type="text" name="Compañia" class="form-control" value="{{old("Compañia")}}">
+                    <p class="text-danger">{{ $errors->first('Compañia') }}</p>
                 </div>
                 <div class="col">
                 <p class="text-start"><label class="fs-4 fw-bolder">Precio Venta:</label></p>
-                    <input type="text" class="form-control" name="txtVenta">
+                <input type="text" name="Precio_venta" class="form-control" value="{{old("Precio_venta")}}">
+                <p class="text-danger">{{ $errors->first('Precio_venta') }}</p>
                 </div>   
             </div>    
             <div class="form-row">
             <div class="col">
             <p class="text-start"><label class="fs-4 fw-bolder">Cantidad:</label></p>
-                <input type="text" class="form-control" name="txtCant">
+            <input type="text" name="Cantidad" class="form-control" value="{{old("Cantidad")}}">
+            <p class="text-danger">{{ $errors->first('Cantidad') }}</p>
             </div>
             <div class="col">
             <p class="text-start"><label class="fs-4 fw-bolder">Fecha ingreso:</label></p>
-                <input type="date" class="form-control" name="txtFecha">
+            <input type="text" name="Fecha" class="form-control" value="{{old("Fecha")}}">
+            <p class="text-danger">{{ $errors->first('Fecha') }}</p>
             </div>   
             </div> 
-            <br><div class="btn-group" role="group">
-                <p><label class="fs-4 fw-bolder">Proveedor:</label></p>
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                </div>
-            </div></br>
+            <br>
+            <p class="text-start"><label class="fs-4 fw-bolder">Proveedores:</label></p>
+            <input type="text" name="Proveedor" class="form-control" value="{{old("Proveedor")}}">
+            <p class="text-danger">{{ $errors->first('Proveedor') }}</p>
+          
     
         </div>
         <div class="card-footer">
@@ -66,5 +68,14 @@
         </div>
         
 </div>
+@if (session()->has('mensaje'))
+<br>
+<div class="alert alert-success" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Editado con exito
+  </p>
+</div>
 
+<br>
+@endif
 @stop

@@ -50,7 +50,7 @@
                         <th scope="col">4171011123</th>
                         <th scope="col">4171011122</th>
                         <th scope="col">comics_pro@gmail.com</th>
-                        <th scope="col" style="background-color: blue">Editar</th>
+                        <th scope="col" style="background-color: blue"><a href="13">Editar</a></th>
                         <th scope="col" style="background-color: red">Eliminar</th>
                       </tr>
                       <tr>
@@ -61,7 +61,7 @@
                         <th scope="col">4221212343</th>
                         <th scope="col">4221232322</th>
                         <th scope="col">animeanimador@gmail.com</th>
-                        <th scope="col" style="background-color: blue">Editar</th>
+                        <th scope="col" style="background-color: blue"><a href="13">Editar</a></th>
                         <th scope="col" style="background-color: red">Eliminar</th>
                      
                 
@@ -76,7 +76,7 @@
                         <th scope="col">2442424422</th>
                         <th scope="col">2442424244</th>
                         <th scope="col">indi@gmail.com</th>
-                        <th scope="col" style="background-color: blue">Editar</th>
+                        <th scope="col" style="background-color: blue"> <a href="13">Editar</a></th>
                         <th scope="col" style="background-color: red">Eliminar</th>
                     
                       </tr>
@@ -95,7 +95,7 @@
                         <tr>
                          
                             
-                          <th scope="row"><button type="button" class="btn btn-primary">Agregar Proveedor</button></th>
+                          <th scope="row"><a href="12"><button type="button" class="btn btn-primary">Agregar Proveedor</button></a></th>
                           
                           <tr>
                      

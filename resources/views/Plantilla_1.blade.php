@@ -18,15 +18,27 @@
       header {
         background: rgb(96,41,40);
         width: 100%;
-        position: fixed;
         z-index: 100;
       }
       
       nav {
         float: left;
       }
-      table{
+      a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+
+      }
+      a:hover{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      }
+      .Plantilla {
+        background: rgb(96,41,40);
         padding-left: 10%;
+        width: 100%;
+        
+        z-index: 100
       }
       table tr td {
         list-style: none;
@@ -62,7 +74,7 @@
       
       </style>
       <header>
-        <TABLE ALIGN="left">
+        <TABLE ALIGN="left" class="Plantilla">
       
           <tr>
 
