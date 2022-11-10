@@ -29,9 +29,9 @@ Route::view('6','catalogo2');
 
 
 
-Route::get('/', function () {
-    return view('Plantilla_1');
-});
+// Route::get('/', function () {
+//     return view('Plantilla_1');
+// });
 
 Route::post('AltaArticulo',[ControladorComics::class,'validacion1']);
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
@@ -39,3 +39,22 @@ Route::post('Comics1',[ControladorComics::class,'validacion3']);
 Route::post('Comics2',[ControladorComics::class,'validacion4']);
 Route::post('Proveedor1',[ControladorComics::class,'validacion5']);
 Route::post('Proveedor2',[ControladorComics::class,'validacion6']);
+Route::post('PostLogin',[controllerLogin::class, 'PostLogin'])->name('Loging');
+
+Route::get('/',function(){
+    return view('Login');
+})->name('log');
+
+
+
+Route::get('VentasArticulos',function(){
+    return view('VentasArticulos');
+})->name('VentArticulos');
+
+Route::get('VentasComics',function(){
+    return view('VentasComics');
+})->name('VentComics');
+
+Route::get('QuienSomos',function(){
+    return view('QuienSomos');
+})->name('WhoIam');
