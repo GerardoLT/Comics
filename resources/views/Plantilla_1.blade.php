@@ -3,9 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>WeirdoComics </title>
+
+    <link href="css/cat_cards.css" rel="stylesheet" type="text/css">
+
+
     <title>Plantilla </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <style>
       header {
@@ -49,7 +56,7 @@
       form input{
         text-align: unset;
       }
-      p{
+      header p{
         color: rgb(96,41,40);
       }
       
@@ -59,22 +66,29 @@
       
           <tr>
 
+            <td> <a href="/"> <img src="img\comics.jpg"
+              height="80" width="250"
+              
+
+              ></a>
+
             </td>
            
             <td> <p >----------------------</p></td>
+            
             <td> <input type="text"></td>
             <td> <button>Buscar</button></td>
             <td> <p >------------------</p></td>
-            <td> <a href="#">Carrito</a> </td>
+            <td> <a href="4">Carrito</a> </td>
           </tr>
           <tr>
             <td> <p >----------------------</p></td>
+            <td> <p >-------------</p></td>
            
-            <td> <a href="#">Comics</a></td>
-            <td> <a href="#">Articulos</a></td>
-            <td> <a href="#">Catalogo</a></td>
-            <td> <a href="#">Provedores</a></td>
-            <td> <a href="#">Pedidos</a></td>
+            <td> <a href="2">Catalogo</a></td>
+            <td> <a href="#">Ventas</a></td>
+            <td> <a href="1">Provedores</a></td>
+            <td> <a href="3">Pedidos</a></td>
            
             <td> <p >------------------</p></td>
 
@@ -83,6 +97,11 @@
 </header>
 
   <body>
+
+      @yield('Contenido')
+
+
+
 
     
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
