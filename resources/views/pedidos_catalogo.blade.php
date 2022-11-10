@@ -77,7 +77,7 @@
                           23-4-22
                         </th>
                       
-                        <th scope="col" style="background-color: blue">Editar</th>
+                        <th scope="col" style="background-color: blue"><a href="32">Editar</a></th>
                         <th scope="col" style="background-color: red">Eliminar</th>
                       </tr>
                       <tr>
@@ -106,7 +106,7 @@
                         <tr>
                          
                             
-                          <th scope="row"><button type="button" class="btn btn-primary">Agregar Pedido</button></th>
+                          <th scope="row"><button type="button" class="btn btn-primary"><a href="31">Crear Pedido</a></button></th>
                           
                           <tr>
                             <tr>
