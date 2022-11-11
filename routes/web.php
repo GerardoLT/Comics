@@ -24,7 +24,7 @@ Route::view('23','Editar_Comics')->name("23");;
 Route::view('24','Editar_Articulo')->name("24");
 Route::view('12','Alta_Proveedor')->name("12");
 Route::view('13','Editar_Proveedor')->name("13");
-Route::view('31','Alta_Pedidos');
+Route::view('31','Alta_Pedidos')->name("31");
 Route::view('32','Editar_Pedidos');
 Route::view('6','catalogo2');
 
