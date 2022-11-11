@@ -15,7 +15,7 @@
 <br>
 <br>
 <!-- tablas -->
-<div class="container col-md-8" style="background-color: gray">
+<div class="container col-md-8 table table-hover" >
 
   <table style="align-content: center">
      
@@ -23,9 +23,6 @@
     <br>
      
     <tr>
-          <th>
-              <p style="color: grey">----------</p>      
-          </th>
           <th>
               <table class="table">
                   <tr>
@@ -59,9 +56,6 @@
       
         
        
-            </th>
-            <th>
-                <p style="color: grey">----------</p>      
             </th>
             <th>
                 <table class="table table-success table-striped"  >

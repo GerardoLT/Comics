@@ -12,6 +12,6 @@ class controllerLogin extends Controller
         return redirect()->route('VentArticulos')->with('exito', 'Paso');
     }
     function PostSignUp(ValidatorSignUp $req){
-        return redirect()->route('RegistrarTrabajador')->with('exito', 'Paso');
+        return redirect()->route('Signin')->with('exito', 'Paso');
     }
 }

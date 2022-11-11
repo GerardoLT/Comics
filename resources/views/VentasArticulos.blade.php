@@ -29,16 +29,8 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -59,16 +51,8 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -88,16 +72,7 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                           
                         </div>
                     </div>
                 </div>
@@ -117,16 +92,7 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -150,16 +116,8 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
+                           
                         </div>
                     </div>
                 </div>
@@ -180,16 +138,7 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -209,16 +158,8 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
+                            
                         </div>
                     </div>
                 </div>
@@ -238,16 +179,8 @@
                         <label for="add" name="cantidad" value="{{old('cantidad')}}"> 0 </label>
                         <button class="btn btn-theme float-right" type="button">+</button>
                         <div class="card-footer text-center" id="adminopcion">
-                            <button class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">delete</span>
-                                <div class="mdc-fab__touch"></div>
-                            </button>
-                            <a type="button" href="24" class="mdc-fab mdc-fab--mini mdc-fab--touch">
-                                <div class="mdc-fab__ripple"></div>
-                                <span class="material-icons mdc-fab__icon">edit</span>
-                                <div class="mdc-fab__touch"></div>
-                            </a>
+                            
+                          
                         </div>
                     </div>
                 </div>

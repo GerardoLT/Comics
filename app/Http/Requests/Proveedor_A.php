@@ -26,7 +26,7 @@ class Proveedor_A extends FormRequest
         return [
       
 
-'Correo'=>'required',
+'Correo'=>'required | email',
 'Pais'=>'required',
 'Celular'=>'required|int',
 'Direccion'=>'required',
