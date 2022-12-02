@@ -10,10 +10,6 @@
   <link href="css/cat_cards.css" rel="stylesheet" type="text/css">
   <link href="css/login.css" rel="stylesheet" type="text/css">
 
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
   <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -99,7 +95,7 @@
         <td>
         </td>
         <td> <input type="text"></td>
-        <td> <button>Buscar</button></td>
+        <td> <button class="btn ">Buscar</button></td>
         <td>
         </td>
         <td> <a href="4">Carrito</a> </td>
