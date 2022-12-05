@@ -21,13 +21,13 @@ class ControladorComic extends Controller
     }
 
     public function store(Comics_A $request)
-    {
+    {   $suma= $request->input('Precio_compra')+$request->input('Precio_compra') * 0.4;
         DB::table('tb_comic')->insert([
             "nombre"=>$request->input('Nombre'),
             "edicion"=>$request->input('Edicion'),
             "precioCompra"=>$request->input('Precio_compra'),
             "compania"=>$request->input('Compañia'),
-            "precioVenta"=>$request->input('Precio_venta'),
+            "precioVenta"=>$suma,
             "cantidad"=>$request->input('Cantidad'),
             "fechaIngreso"=>$request->input('Fecha'),
             "idproveedor"=>$request->input('Proveedor'),

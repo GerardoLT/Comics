@@ -21,14 +21,14 @@ class ControladorArticulos extends Controller
     }
 
     public function store(Articulo_A $request)
-    {
+    {   $suma= $request->input('Precio_compra')+$request->input('Precio_compra') * 0.4;
         DB::table('tb_articulo')->insert([
             "tipo"=>$request->input('Tipo'),
             "Marca"=>$request->input('Marca'),
             "FechaIngreso"=>$request->input('fecha'),
             "PrecioCompra"=>$request->input('Precio_compra'),
             "cantidad"=>$request->input('Cantidad'),
-            "PrecioVenta"=>$request->input('Precio_venta'),
+            "PrecioVenta"=>$suma,
             "descripcion"=>$request->input('Descripcion'),
             "idproveedor"=>$request->input('Proveedor'),
             "created_at"=>Carbon::now(),
