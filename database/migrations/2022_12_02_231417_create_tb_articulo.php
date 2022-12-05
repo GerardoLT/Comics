@@ -17,7 +17,7 @@ return new class extends Migration
 
             $table->increments('idarticulo');
             $table->string('tipo');
-            $table->string('Marca');
+            $table->string('marca');
             $table->date('FechaIngreso');
             $table->string('PrecioCompra');
             $table->string('cantidad');
