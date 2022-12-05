@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\ControladorComics;
-use App\Http\Controllers\ControladorDB;
+use App\Http\Controllers\ControladorArticulos;
+use App\Http\Controllers\ControladorComic;
 use App\Http\Controllers\controllerLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ Route::view('3','pedidos_catalogo');
 Route::view('4','carrito');
 Route::view('5','catalogo');
 //Route::view('21','Alta_Articulo')->name("21");;
-Route::view('22','Alta_Comics')->name("22");
+//Route::view('22','Alta_Comics')->name("22");
 Route::view('23','Editar_Comics')->name("23");;
 Route::view('24','Editar_Articulo')->name("24");
 Route::view('12','Alta_Proveedor')->name("12");
@@ -34,8 +35,13 @@ Route::view('6','catalogo2');
 // });
 
 //Route::post('AltaArticulo',[ControladorComics::class,'validacion1']);
-Route:: post('articulo', [ControladorDB::class, 'store'])->name('articulo.store');
-Route::get('articulo/create',[ControladorDB::class,'create'])->name('articulo.create');
+//ALTA ARTICULO
+Route:: post('articulo', [ControladorArticulos::class, 'store'])->name('articulo.store');
+Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('articulo.create');
+
+//AlTA COMICS
+Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
+Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
 
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
 Route::post('Comics1',[ControladorComics::class,'validacion3']);
