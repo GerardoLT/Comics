@@ -44,9 +44,11 @@ Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('arti
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
 Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
 
-//AlTA PROVEEDOR
-Route:: post('proveedor', [ControladorComic::class, 'store'])->name('proveedor.store');
-Route::get('proveedor/create',[ControladorComic::class,'create'])->name('proveedor.create');
+//ALTA PROVEEDOR
+Route:: post('proveedor', [ControladorProveedor::class, 'store'])->name('proveedor.store');
+Route::get('proveedor/create',[ControladorProveedor::class,'create'])->name('proveedor.create');
+
+
 
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
 Route::post('Comics1',[ControladorComics::class,'validacion3']);

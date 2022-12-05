@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\Articulo_A;
+use App\Http\Requests\Proveedor_A;
 use DB;
 use Carbon\Carbon;
 
@@ -23,12 +23,12 @@ class ControladorProveedor extends Controller
     public function store(Proveedor_A $request)
     {
         DB::table('tb_proveedor')->insert([
-            "contacto"=>$request->input('Tipo'),
-            "empresa"=>$request->input('Marca'),
-            "direccion"=>$request->input('fecha'),
-            "telefono"=>$request->input('Precio_compra'),
-            "pais"=>$request->input('Cantidad'),
-            "correo"=>$request->input('Precio_venta'),
+            "contacto"=>$request->input('Contacto'),
+            "empresa"=>$request->input('Empresa'),
+            "direccion"=>$request->input('Direccion'),
+            "telefono"=>$request->input('Celular'),
+            "pais"=>$request->input('Pais'),
+            "correo"=>$request->input('Correo'),
             "created_at"=>Carbon::now(),
             "updated_at"=>Carbon::now(),
         ]);

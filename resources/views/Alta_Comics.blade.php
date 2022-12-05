@@ -3,6 +3,13 @@
 @section('Contenido')
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 @if (session()->has('mensaje'))
 <div class="alert alert-success" role="alert" style="align-content: center">
@@ -10,7 +17,6 @@
 Alta con exito
   </p>
 </div>
-
 @endif
 
 <div class="container">
