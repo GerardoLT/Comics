@@ -111,10 +111,10 @@
           <tr>
 
 
-            <th scope="row"><a href="21"><button type="button" class="btn btn-primary">Agregar articulo</button></a></th>
+            <th scope="row"><a href="{{route('articulo.create')}}"><button type="button" class="btn btn-primary">Agregar articulo</button></a></th>
 
           <tr>
-            <th scope="row"><a href="22"><button type="button" class="btn btn-primary">Agregar comics</button></a></th>
+            <th scope="row"><a href="{{route('comic.create')}}"><button type="button" class="btn btn-primary">Agregar comics</button></a></th>
           </tr>
           <tr>
 

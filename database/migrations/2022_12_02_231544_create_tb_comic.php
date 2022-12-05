@@ -17,12 +17,12 @@ return new class extends Migration
             $table->increments('idcomic');
             $table->string('nombre');
             $table->string('edicion');
-            $table->string('compania');
-            $table->string('cantidad');
             $table->string('precioCompra');
+            $table->string('compania');
             $table->string('precioVenta');
+            $table->string('cantidad');
             $table->date('fechaIngreso');
-            $table->integer('idproveedor');
+            $table->string('idproveedor');
             $table->timestamps();
         });
     }

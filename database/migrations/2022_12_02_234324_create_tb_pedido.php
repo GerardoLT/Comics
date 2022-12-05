@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('tb_pedido', function (Blueprint $table) {
             $table->increments('idpedido');
             $table->string('descripcion');
-            $table->integer('idcomic');
-            $table->integer('idarticulo');
+            $table->string('idcomic');
+            $table->string('idarticulo');
             $table->string('cantidad');
             $table->string('precio');
-            $table->integer('idproveedor');
+            $table->string('idproveedor');
             $table->timestamps();
         });
     }

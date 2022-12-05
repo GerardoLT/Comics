@@ -5,6 +5,19 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+@if (session()->has('mensaje'))
+<div class="alert alert-success" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Alta con exito
+  </p>
+</div>
+@endif
 
 <div class="container">
 
@@ -14,7 +27,7 @@
             Comics
         </div>
         <div class="card-body">
-            <form method="post" action="Comics1">
+            <form method="post" action="{{route('comic.store')}}">
                 @csrf 
                 <p class="text-start"><label class="fs-4 fw-bolder">Nombre:</label></p>
                 <input type="text" name="Nombre" class="form-control" value="{{old("Nombre")}}">
@@ -68,14 +81,4 @@
         </div>
         
 </div>
-@if (session()->has('mensaje'))
-<br>
-<div class="alert alert-success" role="alert" style="align-content: center">
-  <p style="text-align: center">
-Alta con exito
-  </p>
-</div>
-
-<br>
-@endif
 @stop

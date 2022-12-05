@@ -30,7 +30,6 @@ class Proveedor_A extends FormRequest
 'Pais'=>'required',
 'Celular'=>'required|int',
 'Direccion'=>'required',
-'Fijo'=>'required|int',
 'Empresa'=>'required',
 'Contacto'=>'required',
         ];

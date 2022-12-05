@@ -93,7 +93,7 @@
           <tr>
 
 
-            <th scope="row"><a href="12"><button type="button" class="btn btn-primary">Agregar Proveedor</button></a></th>
+            <th scope="row"><a href="{{route('proveedor.create')}}"><button type="button" class="btn btn-primary">Agregar Proveedor</button></a></th>
 
           <tr>
 
