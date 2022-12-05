@@ -1,6 +1,7 @@
 @extends('Plantilla_1')
 
 @section('Contenido')
+
 <br>
 <br>
 <br>
@@ -9,6 +10,13 @@
 <br>
 <br>
 <br>
+@if (session()->has('confirmacion'))
+<div class="alert alert-success" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Alta con exito
+  </p>
+</div>
+@endif
 
 <div class="container">
 
@@ -18,7 +26,7 @@
             Articulos
         </div>
         <div class="card-body">
-            <form method="post" action="AltaArticulo">
+            <form method="post" action="{{route('articulo.store')}}">
                 @csrf 
             <div class="form-row">
                 
@@ -74,14 +82,5 @@
         </div>
         
 </div>
-@if (session()->has('mensaje'))
-<br>
-<div class="alert alert-success" role="alert" style="align-content: center">
-  <p style="text-align: center">
-Alta con exito
-  </p>
-</div>
 
-<br>
-@endif
 @stop

@@ -3,80 +3,56 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\Articulo_A;
+use DB;
+use Carbon\Carbon;
 
 class ControladorDB extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('Alta_Articulo');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(Articulo_A $request)
     {
-        //
+        DB::table('tb_articulo')->insert([
+            "tipo"=>$request->input('Tipo'),
+            "Marca"=>$request->input('Marca'),
+            "FechaIngreso"=>$request->input('fecha'),
+            "PrecioCompra"=>$request->input('Precio_compra'),
+            "cantidad"=>$request->input('Cantidad'),
+            "PrecioVenta"=>$request->input('Precio_venta'),
+            "descripcion"=>$request->input('Descripcion'),
+            "idproveedor"=>$request->input('Proveedor'),
+            "created_at"=>Carbon::now(),
+            "updated_at"=>Carbon::now(),
+        ]);
+        return redirect('articulo/create')->with('confirmacion'," ");
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

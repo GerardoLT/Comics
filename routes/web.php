@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\ControladorComics;
+use App\Http\Controllers\ControladorDB;
 use App\Http\Controllers\controllerLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,7 @@ Route::view('2','catalogo');
 Route::view('3','pedidos_catalogo');
 Route::view('4','carrito');
 Route::view('5','catalogo');
-Route::view('21','Alta_Articulo')->name("21");;
+//Route::view('21','Alta_Articulo')->name("21");;
 Route::view('22','Alta_Comics')->name("22");
 Route::view('23','Editar_Comics')->name("23");;
 Route::view('24','Editar_Articulo')->name("24");
@@ -32,7 +33,10 @@ Route::view('6','catalogo2');
 //     return view('Plantilla_1');
 // });
 
-Route::post('AltaArticulo',[ControladorComics::class,'validacion1']);
+//Route::post('AltaArticulo',[ControladorComics::class,'validacion1']);
+Route:: post('articulo', [ControladorDB::class, 'store'])->name('articulo.store');
+Route::get('articulo/create',[ControladorDB::class,'create'])->name('articulo.create');
+
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
 Route::post('Comics1',[ControladorComics::class,'validacion3']);
 Route::post('Comics2',[ControladorComics::class,'validacion4']);

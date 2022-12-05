@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('tb_articulo', function (Blueprint $table) {
 
             $table->increments('idarticulo');
-            $table->string('descripcion');
             $table->string('tipo');
             $table->string('Marca');
-            $table->string('cantidad');
             $table->date('FechaIngreso');
             $table->string('PrecioCompra');
+            $table->string('cantidad');
             $table->string('PrecioVenta');
+            $table->string('descripcion');
             $table->integer('idproveedor');
             $table->timestamps();
         });
