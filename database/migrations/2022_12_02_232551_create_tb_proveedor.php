@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('tb_proveedor', function (Blueprint $table) {
             $table->increments('idproveedor');
+            $table->string('contacto');
             $table->string('empresa');
             $table->string('direccion');
-            $table->string('pais');
-            $table->string('contacto');
             $table->string('telefono');
+            $table->string('pais');
             $table->string('correo');
             $table->timestamps();
         });

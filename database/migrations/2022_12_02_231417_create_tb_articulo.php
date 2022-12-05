@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('cantidad');
             $table->string('PrecioVenta');
             $table->string('descripcion');
-            $table->integer('idproveedor');
+            $table->string('idproveedor');
             $table->timestamps();
         });
     }

@@ -3,8 +3,7 @@
 @section('Contenido')
 <br>
 <br>
-<br>
-<br>
+
 @if (session()->has('mensaje'))
 <div class="alert alert-success" role="alert" style="align-content: center">
   <p style="text-align: center">

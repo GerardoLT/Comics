@@ -13,7 +13,7 @@
             Proveedores
         </div>
         <div class="card-body">
-            <form method="post" action="Proveedor1">
+            <form method="post" action="{{route('proveedor.store')}}">
                 @csrf 
                 <p class="text-start"><label class="fs-4 fw-bolder">Contacto:</label></p>
                 <input type="text" name="Contacto" class="form-control" value="{{old("Contacto")}}">
@@ -25,10 +25,6 @@
                 <p class="text-danger">{{ $errors->first('Empresa') }}</p>
                 </div>
                 <div class="col">
-                <p class="text-start"><label class="fs-4 fw-bolder">No Fijo:</label></p>
-                <input type="text" name="Fijo" class="form-control" value="{{old("Fijo")}}">
-                <p class="text-danger">{{ $errors->first('Fijo') }}</p>
-                </div>
             </div>
             <div class="form-row">
                 <div class="col">

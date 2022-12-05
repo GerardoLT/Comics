@@ -2,6 +2,7 @@
 use App\Http\Controllers\ControladorComics;
 use App\Http\Controllers\ControladorArticulos;
 use App\Http\Controllers\ControladorComic;
+use App\Http\Controllers\ControladorProveedor;
 use App\Http\Controllers\controllerLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -24,7 +25,7 @@ Route::view('5','catalogo');
 //Route::view('22','Alta_Comics')->name("22");
 Route::view('23','Editar_Comics')->name("23");;
 Route::view('24','Editar_Articulo')->name("24");
-Route::view('12','Alta_Proveedor')->name("12");
+//Route::view('12','Alta_Proveedor')->name("12");
 Route::view('13','Editar_Proveedor')->name("13");
 Route::view('31','Alta_Pedidos')->name("31");
 Route::view('32','Editar_Pedidos');
@@ -42,6 +43,10 @@ Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('arti
 //AlTA COMICS
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
 Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
+
+//AlTA PROVEEDOR
+Route:: post('proveedor', [ControladorComic::class, 'store'])->name('proveedor.store');
+Route::get('proveedor/create',[ControladorComic::class,'create'])->name('proveedor.create');
 
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
 Route::post('Comics1',[ControladorComics::class,'validacion3']);
