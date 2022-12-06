@@ -2,8 +2,6 @@
 
 @section('Contenido')
 
-
-
 <br>
 <br>
 <br>
@@ -16,6 +14,13 @@
 <br>
 <br>
 <br>
+@if(session()->has('Actualiza'))
+<div class="alert alert-success" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Proveedor editado
+  </p>
+</div>
+@endif
 
 <!-- tablas -->
 <div class="container col-md-8 table table-hover">
@@ -34,7 +39,6 @@
             <th scope="col">Dirección</th>
             <th scope="col">País</th>
             <th scope="col">Contacto</th>
-            <th scope="col">No Fijo</th>
             <th scope="col">No Celular</th>
             <th scope="col">Correo</th>
             <th scope="col">Editar</th>
@@ -42,45 +46,23 @@
           </tr>
           </thead>
           <tbody>
+          @foreach($tablaPro as $prove)
+          @include('Editar_Proveedor')
             <tr>
-              <th scope="col">comics pro</th>
-              <th scope="col">santiago comatlan 200</th>
-              <th scope="col">mexico</th>
-              <th scope="col">perdo escoses</th>
-              <th scope="col">4171011123</th>
-              <th scope="col">4171011122</th>
-              <th scope="col">comics_pro@gmail.com</th>
-              <th scope="col" style="background-color: blue"><a href="13">Editar</a></th>
+              <th scope="col">{{$prove->empresa}}</th>
+              <th scope="col">{{$prove->direccion}}</th>
+              <th scope="col">{{$prove->pais}}</th>
+              <th scope="col">{{$prove->contacto}}</th>
+              <th scope="col">{{$prove->telefono}}</th>
+              <th scope="col">{{$prove->correo}}</th>
+              <th>
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Editar_Proveedor{{$prove->idproveedor}}">
+                Editar
+                </button></th>
               <th scope="col" style="background-color: red">Eliminar</th>
-            </tr>
-            <tr>
-              <th scope="col">anime animador</th>
-              <th scope="col">prados del puente</th>
-              <th scope="col">Mexico</th>
-              <th scope="col">gustavo enriquez</th>
-              <th scope="col">4221212343</th>
-              <th scope="col">4221232322</th>
-              <th scope="col">animeanimador@gmail.com</th>
-              <th scope="col" style="background-color: blue"><a href="13">Editar</a></th>
-              <th scope="col" style="background-color: red">Eliminar</th>
-
-
-
-            </tr>
-            <tr>
-
-              <th scope="col">comics indi</th>
-              <th scope="col">madreo 123</th>
-              <th scope="col">mexico</th>
-              <th scope="col">matias martines</th>
-              <th scope="col">2442424422</th>
-              <th scope="col">2442424244</th>
-              <th scope="col">indi@gmail.com</th>
-              <th scope="col" style="background-color: blue"> <a href="13">Editar</a></th>
-              <th scope="col" style="background-color: red">Eliminar</th>
-
             </tr>
           </tbody>
+          @endforeach
         </table>
 
 

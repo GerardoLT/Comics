@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view('1','Proveedor_Catalogo');
+//Route::view('1','Proveedor_Catalogo');
 Route::view('2','catalogo');
 Route::view('3','pedidos_catalogo');
 Route::view('4','carrito');
@@ -40,13 +40,18 @@ Route::view('6','catalogo2');
 Route:: post('articulo', [ControladorArticulos::class, 'store'])->name('articulo.store');
 Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('articulo.create');
 
+
 //AlTA COMICS
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
 Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
 
+
 //ALTA PROVEEDOR
 Route:: post('proveedor', [ControladorProveedor::class, 'store'])->name('proveedor.store');
 Route::get('proveedor/create',[ControladorProveedor::class,'create'])->name('proveedor.create');
+Route::get('proveedor',[ControladorProveedor::class,'index'])->name('proveedor.index');
+Route::put('proveedor/{id}',[ControladorProveedor::class,'update'])->name('proveedor.update');
+
 
 
 

@@ -104,7 +104,7 @@
 
         <td> <a href="2">Catalogo</a></td>
         <td> <a href="VentasArticulos">Ventas</a></td>
-        <td> <a href="1">Proveedores</a></td>
+        <td> <a href="{{route('proveedor.index')}}">Proveedores</a></td>
         <td> <a href="3">Pedidos</a></td>
         <td> <a href="RegistrarTrabajador">Alta Trabajador</a></td>
 
