@@ -63,6 +63,7 @@ class ControladorProveedor extends Controller
 
     public function destroy($id)
     {
-        //
+        DB::table('tb_proveedor')->where('idProveedor', $id)->delete();
+        return redirect('proveedor')->with('Eliminar'," ");
     }
 }

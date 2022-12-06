@@ -11,13 +11,17 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 @if(session()->has('Actualiza'))
 <div class="alert alert-success" role="alert" style="align-content: center">
   <p style="text-align: center">
 Proveedor editado
+  </p>
+</div>
+@endif
+@if(session()->has('Eliminar'))
+<div class="alert alert-danger" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Proveedor eliminado
   </p>
 </div>
 @endif
@@ -48,6 +52,7 @@ Proveedor editado
           <tbody>
           @foreach($tablaPro as $prove)
           @include('Editar_Proveedor')
+          @include('Eliminar_Proveedor')
             <tr>
               <th scope="col">{{$prove->empresa}}</th>
               <th scope="col">{{$prove->direccion}}</th>
@@ -58,8 +63,13 @@ Proveedor editado
               <th>
                 <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Editar_Proveedor{{$prove->idproveedor}}">
                 Editar
-                </button></th>
-              <th scope="col" style="background-color: red">Eliminar</th>
+                </button>
+              </th>
+              <th>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_Proveedor{{$prove->idproveedor}}">
+                Eliminar
+                </button>
+              </th>
             </tr>
           </tbody>
           @endforeach

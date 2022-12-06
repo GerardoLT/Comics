@@ -51,6 +51,7 @@ Route:: post('proveedor', [ControladorProveedor::class, 'store'])->name('proveed
 Route::get('proveedor/create',[ControladorProveedor::class,'create'])->name('proveedor.create');
 Route::get('proveedor',[ControladorProveedor::class,'index'])->name('proveedor.index');
 Route::put('proveedor/{id}',[ControladorProveedor::class,'update'])->name('proveedor.update');
+Route::delete('proveedor/{id}',[ControladorProveedor::class,'destroy'])->name('proveedor.destroy');
 
 
 
