@@ -30,6 +30,8 @@ Route::view('6','catalogo2');
 Route:: post('articulo', [ControladorArticulos::class, 'store'])->name('articulo.store');
 Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('articulo.create');
 Route::get('articulo',[ControladorArticulos::class,'index'])->name('articulo.index');
+Route::put('articulo/{id}',[ControladorArticulos::class,'update'])->name('articulo.update');
+Route::delete('articulo/{id}',[ControladorArticulos::class,'destroy'])->name('articulo.destroy');
 
 //AlTA COMICS
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');

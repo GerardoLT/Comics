@@ -11,6 +11,20 @@
 
 <br>
 <!-- tablas -->
+@if(session()->has('Actualiza'))
+<div class="alert alert-success" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Articulo editado
+  </p>
+</div>
+@endif
+@if(session()->has('Elimina'))
+<div class="alert alert-danger" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Articulo eliminado
+  </p>
+</div>
+@endif
 <div class="container col-md-8 table table-hover">
   <h1>Catalogo Articulos</h1>
   <table style="align-content: center">
@@ -33,13 +47,23 @@
           </thead>
           <tbody>
           @foreach($tablaAr as $art)
+          @include('Editar_Articulo')
+          @include('Eliminar_Articulo')
             <tr>
               <th scope="col">{{$art->Marca}}</th>
               <th scope="col">{{$art->PrecioVenta}}</th>
               <th scope="col">{{$art->cantidad}}</th>
               <th scope="col">{{$art->descripcion}}</th>
-              <th scope="col" style="background-color: blue"><a href="24">Editar</a></th>
-              <th scope="col" style="background-color: red">Eliminar</th>
+              <th>
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Editar_Articulo{{$art->idarticulo}}">
+                Editar
+                </button>
+              </th>
+              <th>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_Articulo{{$art->idarticulo}}">
+                Eliminar
+                </button>
+              </th>
 
             </tr>
           </tbody>
