@@ -37,7 +37,8 @@ Route::delete('articulo/{id}',[ControladorArticulos::class,'destroy'])->name('ar
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
 Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
 Route::get('comic',[ControladorComic::class,'index'])->name('comic.index');
-
+Route::put('comic/{id}',[ControladorComic::class,'update'])->name('comic.update');
+Route::delete('comic/{id}',[ControladorComic::class,'destroy'])->name('comic.destroy');
 
 //ALTA PROVEEDOR
 Route:: post('proveedor', [ControladorProveedor::class, 'store'])->name('proveedor.store');

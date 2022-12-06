@@ -11,6 +11,20 @@
 
 <br>
 <!-- tablas -->
+@if(session()->has('Actualiza'))
+<div class="alert alert-success" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Comic editado
+  </p>
+</div>
+@endif
+@if(session()->has('Elimina'))
+<div class="alert alert-danger" role="alert" style="align-content: center">
+  <p style="text-align: center">
+Comic eliminado
+  </p>
+</div>
+@endif
 <div class="container col-md-8 table table-hover">
   <h1>Catalogo Comics</h1>
   <table style="align-content: center">
@@ -33,13 +47,23 @@
           </thead>
           <tbody>
           @foreach($tablaCo as $com)
+          @include('Editar_Comics')
+          @include('Eliminar_Comics')
             <tr>
               <th scope="col">{{$com->nombre}}</th>
               <th scope="col">{{$com->precioVenta}}</th>
               <th scope="col">{{$com->cantidad}}</th>
               <th scope="col">{{$com->edicion}}</th>
-              <th scope="col" style="background-color: blue"><a href="24">Editar</a></th>
-              <th scope="col" style="background-color: red">Eliminar</th>
+              <th>
+                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Editar_Comics{{$com->idcomic}}">
+                Editar
+                </button>
+              </th>
+              <th>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#Eliminar_Comics{{$com->idcomic}}">
+                Eliminar
+                </button>
+              </th>
 
             </tr>
           </tbody>

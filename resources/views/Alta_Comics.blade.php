@@ -69,7 +69,7 @@ Alta con exito
             </div>   
             </div> 
             <br>
-            <p class="text-start"><label class="fs-4 fw-bolder">Proveedores:</label></p>
+            <p class="text-start"><label class="fs-4 fw-bolder">Proveedor:</label></p>
             <input type="text" name="Proveedor" class="form-control" value="{{old("Proveedor")}}">
             <p class="text-danger">{{ $errors->first('Proveedor') }}</p>
           
