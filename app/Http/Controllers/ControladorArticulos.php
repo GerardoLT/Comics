@@ -12,7 +12,8 @@ class ControladorArticulos extends Controller
    
     public function index()
     {
-       //
+        $tablaAr = DB::table('tb_articulo')->get();
+        return view('Consulta_Articulos', compact('tablaAr'));
     }
 
     public function create()

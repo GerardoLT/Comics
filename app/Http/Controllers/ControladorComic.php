@@ -12,7 +12,8 @@ class ControladorComic extends Controller
    
     public function index()
     {
-        //
+        $tablaCo = DB::table('tb_comic')->get();
+        return view('Consulta_Comics', compact('tablaCo'));
     }
 
     public function create()

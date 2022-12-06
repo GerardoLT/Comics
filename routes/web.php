@@ -6,18 +6,8 @@ use App\Http\Controllers\ControladorProveedor;
 use App\Http\Controllers\controllerLogin;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 //Route::view('1','Proveedor_Catalogo');
-Route::view('2','catalogo');
+//Route::view('2','Consulta_Articulos');
 Route::view('3','pedidos_catalogo');
 Route::view('4','carrito');
 Route::view('5','catalogo');
@@ -39,11 +29,12 @@ Route::view('6','catalogo2');
 //ALTA ARTICULO
 Route:: post('articulo', [ControladorArticulos::class, 'store'])->name('articulo.store');
 Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('articulo.create');
-
+Route::get('articulo',[ControladorArticulos::class,'index'])->name('articulo.index');
 
 //AlTA COMICS
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
 Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
+Route::get('comic',[ControladorComic::class,'index'])->name('comic.index');
 
 
 //ALTA PROVEEDOR
