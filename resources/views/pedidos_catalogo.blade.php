@@ -14,7 +14,7 @@
 <br>
 <br>
 <!-- tablas -->
-<div class="container col-md-10 table table-hover">
+<div class="container col-md-12 table table-hover">
   <h1>Pedidos</h1>
   <table style="align-content: center">
 
@@ -24,71 +24,41 @@
 
           <tr>
             <th scope="col">No Pedido</th>
-            <th scope="col">Productos</th>
+            <th scope="col">descripcion</th>
             <th scope="col">cantidad</th>
             <th scope="col">Precio</th>
-            <th scope="col">Proveedor</th>
             <th scope="col">fecha</th>
             <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
+            <th scope="col">PDF</th>
           </tr>
-          </thead>
-          <tbody>
+            @foreach ($datos as $dato)
             <tr>
-              <th scope="col">1</th>
-              <th scope="col">spiderman n12
-                <br>
-
-                batman retorno
-                <br>
-                linterna blanca
-              </th>
-              <th scope="col">
-                12
-                <br>
-                23
-                <br>
-                30
-              </th>
-              <th scope="col">
-                100
-                <br>
-                232
-                <br>
-                222
-
-
-              </th>
-              <th scope="col">comics indi
-                <br>
-                comics indi
-                <br>
-                comics indi
-              </th>
-              <th scope="col">12-2-22
-
-                <br>
-                12-3-22
-
-                <br>
-                23-4-22
-              </th>
-
-              <th scope="col" style="background-color: blue"><a href="32">Editar</a></th>
-              <th scope="col" style="background-color: red">Eliminar</th>
+              <th>{{$dato->idpedido}}</th>
+              <th>{{$dato->descripcion}}</th>
+              <th>{{$dato->cantidad}}</th>
+              <th>{{$dato->precio}}</th>
+              <th>{{$dato->fecha}}</th>
+            <th scope="col"><button type="button" class="btn btn-primary">Editar</button></th>
+            <th scope="row">
+              <form action="{{route('dead',$dato->idpedido)}} " method="POST">
+                @csrf
+              <button type="submit" class="btn btn-primary">Eliminar</button>
+              </form>
+            </a></th>
+              <th scope="row">
+                <form action="{{route('PDF',$dato->idpedido)}} " method="POST">
+                  @csrf
+                <button type="submit" class="btn btn-primary">Generar PDF</button>
+                </form>
+              </a></th>
             </tr>
-            <tr>
-
-
-
-
+            @endforeach
+          
+            </td>
             </tr>
-            <tr>
-
-
-
-            </tr>
-          </tbody>
+         
+          
         </table>
 
 
@@ -101,13 +71,13 @@
           <tr>
 
 
-            <th scope="row"><button type="button" class="btn btn-primary"><a href="31">Crear Pedido</a></button></th>
+            <th scope="row"><button type="button" class="btn btn-primary"><a href="33">Crear Pedido</a></button></th>
 
           <tr>
           <tr>
 
 
-            <th scope="row"><button type="button" class="btn btn-primary">Generar PDF</button></th>
+           
 
           <tr>
 

@@ -81,7 +81,7 @@
                             <tr>
                          
                             
-                              <th scope="row"><button>Imprimir tiket</button></th>
+                              <th scope="row"><a href="tiket"><button>Imprimir tiket</button></a></th>
                             
                             <tr>
                               <tr>

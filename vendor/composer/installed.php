@@ -6,11 +6,20 @@
     'aliases' => 
     array (
     ),
-    'reference' => '961fd3955900aebd483aec39d6cadbdfd53be1df',
+    'reference' => '78f83c7bc13300483be3a6ef43186ad0df408349',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'barryvdh/laravel-dompdf' => 
+    array (
+      'pretty_version' => 'v2.0.0',
+      'version' => '2.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '1d47648c6cef37f715ecb8bcc5f5a656ad372e27',
+    ),
     'brick/math' => 
     array (
       'pretty_version' => '0.10.2',
@@ -69,6 +78,15 @@
       array (
       ),
       'reference' => 'c268e882d4dbdd85e36e4ad69e02dc284f89d229',
+    ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c5310df0e22c758c85ea5288175fc6cd777bc085',
     ),
     'dragonmantank/cron-expression' => 
     array (
@@ -407,7 +425,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '961fd3955900aebd483aec39d6cadbdfd53be1df',
+      'reference' => '78f83c7bc13300483be3a6ef43186ad0df408349',
     ),
     'laravel/pint' => 
     array (
@@ -489,6 +507,15 @@
       array (
       ),
       'reference' => 'ff6248ea87a9f116e78edd6002e39e5128a0d4dd',
+    ),
+    'masterminds/html5' => 
+    array (
+      'pretty_version' => '2.7.6',
+      'version' => '2.7.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '897eb517a343a2281f11bc5556d6548db7d93947',
     ),
     'mockery/mockery' => 
     array (
@@ -595,6 +622,24 @@
       array (
       ),
       'reference' => '4f7fd7836c6f332bb2933569e566a0d6c4cbed74',
+    ),
+    'phenx/php-font-lib' => 
+    array (
+      'pretty_version' => '0.5.4',
+      'version' => '0.5.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dd448ad1ce34c63d09baccd05415e361300c35b4',
+    ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => '0.5.0',
+      'version' => '0.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '76876c6cf3080bcb6f249d7d59705108166a6685',
     ),
     'phpmailer/phpmailer' => 
     array (
@@ -823,6 +868,15 @@
       array (
         0 => '4.5.1',
       ),
+    ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.4.0',
+      'version' => '8.4.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e41d2140031d533348b2192a83f02d8dd8a71d30',
     ),
     'sebastian/cli-parser' => 
     array (
