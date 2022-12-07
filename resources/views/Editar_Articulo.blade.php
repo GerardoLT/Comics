@@ -1,81 +1,52 @@
-@extends('Plantilla_1')
-
-@section('Contenido')
-<br>
-<br>
-<br>
-<br>
-
-<div class="container">
-
-    <h1 class="display-4 text-center mt-5 mb-5">EDITAR</h1>
-    <div class="card text-center mb-5 p-3 mb-2 bg-secondary text-white">
-        <div class="card-header">
-            Articulo
-        </div>
-        <div class="card-body">
-            <form method="post" action="AltaArticulo2">
-                @csrf 
-            <div class="form-row">
-                <div class="col">
-                <p class="text-start"><label class="fs-4 fw-bolder">Tipo:</label></p>
-                <input type="text" name="Tipo" class="form-control" value="{{old("Tipo")}}">
-                <p class="text-danger">{{ $errors->first('Tipo') }}</p>
-                </div>
-                <div class="col">
-                <p class="text-start"><label class="fs-4 fw-bolder">Marca:</label></p>
-                <input type="text" name="Marca" class="form-control" value="{{old("Marca")}}">
-                <p class="text-danger">{{ $errors->first('Marca') }}</p>
-                </div>
+<!-- Modal -->
+<div class="modal fade" id="Editar_Articulo{{$art->idarticulo}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="Editar_Articulo{{$art->idarticulo}}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Editar Proveedor</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="form-row">
-                <div class="col">
-                <p class="text-start"><label class="fs-4 fw-bolder">Fecha ingreso:</label></p>
-                <input type="text" name="fecha" class="form-control" value="{{old("fecha")}}">
-                <p class="text-danger">{{ $errors->first('fecha') }}</p>
-                </div>
-                <div class="col">
-                <p class="text-start"><label class="fs-4 fw-bolder">Precio compra:</label></p>
-                <input type="text" name="Precio_compra" class="form-control" value="{{old("Precio_compra")}}">
-                <p class="text-danger">{{ $errors->first('Precio_compra') }}</p>
-                </div>   
-            </div>    
-            <div class="form-row">
-            <div class="col">
-            <p class="text-start"><label class="fs-4 fw-bolder">Cantidad:</label></p>
-            <input type="text" name="Cantidad" class="form-control" value="{{old("Cantidad")}}">
-            <p class="text-danger">{{ $errors->first('Cantidad') }}</p>
+            <div class="modal-body">
+                <form method="post" action="{{route('articulo.update',$art->idarticulo)}}">
+                    @csrf 
+                    {!!method_field('PUT')!!} 
+                    <label class="form-label fs-4 fst-italic">Tipo:</label>
+                    <input type="text" name="Tipo" class="form-control"  value="{{$art->tipo}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Tipo')}}</p>
+                
+                    <label class="form-label fs-4 fst-italic">Marca:</label>
+                    <input type="text" name="Marca" class="form-control"  value="{{$art->Marca}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Marca')}}</p>
+                
+                    <label class="form-label fs-4 fst-italic">Fecha ingreso:</label>
+                    <input type="text" name="fecha" class="form-control" value="{{$art->FechaIngreso}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('fecha')}}</p>
+                
+                    <label class="form-label fs-4 fst-italic">Precio compra:</label>
+                    <input type="text" name="Precio_compra" class="form-control" value="{{$art->PrecioCompra}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Precio_compra')}}</p>
+                
+                    <label class="form-label fs-4 fst-italic">Cantidad:</label>
+                    <input type="text" name="Cantidad" class="form-control" value="{{$art->cantidad}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Cantidad')}}</p>
+                
+                    <label class="form-label fs-4 fst-italic">Precio venta:</label>
+                    <input type="text" name="Precio_venta" class="form-control" value="{{$art->PrecioVenta}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Precio_venta')}}</p>
+
+                    <label class="form-label fs-4 fst-italic">Descripcion:</label>
+                    <input type="text" name="Descripcion" class="form-control" value="{{$art->descripcion}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Descripcion')}}</p>
+
+                    <label class="form-label fs-4 fst-italic">Proveedor:</label>
+                    <input type="text" name="Proveedor" class="form-control" value="{{$art->idproveedor}}">
+                    <p class="font-monospace text-danger fw-bold text-start">{{ $errors->first('Proveedor')}}</p>
             </div>
-            <div class="col">
-            <p class="text-start"><label class="fs-4 fw-bolder">Precio venta:</label></p>
-            <input type="text" name="Precio_venta" class="form-control" value="{{old("Precio_venta")}}">
-            <p class="text-danger">{{ $errors->first('Precio_venta') }}</p>
-            </div>   
-            </div> 
-            <p class="text-start"><label class="fs-4 fw-bolder" >Descripcion:</label></p>
-            <input type="text" name="Descripcion" class="form-control" value="{{old("Descripcion")}}">
-            <p class="text-danger">{{ $errors->first('Descripcion') }}</p>
-            <br><div class="btn-group" role="group">
-                <p><label class="fs-4 fw-bolder">Proveedor:</label></p>
-                <input type="text" name="Proveedor" class="form-control" value="{{old("Proveedor")}}">
-            <p class="text-danger">{{ $errors->first('Proveedor') }}</p>
-            </div>
-    
-        </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-info fw-bold fst-italic">Guardar</button>
+        <div class="modal-footer">
+        <button herf="Consulta_Articulos" type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Regresar</button>
+        <button type="submit" class="btn btn-outline-success">Actualizar</button>
         </form>
-        </div>
-        
+      </div>
+    </div>
+  </div>
 </div>
-@if (session()->has('mensaje'))
-<br>
-<div class="alert alert-success" role="alert" style="align-content: center">
-  <p style="text-align: center">
-Editado con exito
-  </p>
-</div>
-
-<br>
-@endif
-@stop

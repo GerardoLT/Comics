@@ -7,6 +7,7 @@ use App\Http\Controllers\ControladorProveedor;
 use App\Http\Controllers\controllerLogin;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +20,11 @@ use Illuminate\Support\Facades\Route;
 */
 Route::view('1','Proveedor_Catalogo');
 Route::view('2','catalogo');
+
+//Route::view('1','Proveedor_Catalogo');
+//Route::view('2','Consulta_Articulos');
+Route::view('3','pedidos_catalogo');
+
 Route::view('4','carrito');
 Route::view('5','catalogo');
 //Route::view('21','Alta_Articulo')->name("21");;
@@ -40,14 +46,24 @@ Route::view('6','catalogo2');
 //ALTA ARTICULO
 Route:: post('articulo', [ControladorArticulos::class, 'store'])->name('articulo.store');
 Route::get('articulo/create',[ControladorArticulos::class,'create'])->name('articulo.create');
+Route::get('articulo',[ControladorArticulos::class,'index'])->name('articulo.index');
+Route::put('articulo/{id}',[ControladorArticulos::class,'update'])->name('articulo.update');
+Route::delete('articulo/{id}',[ControladorArticulos::class,'destroy'])->name('articulo.destroy');
 
 //AlTA COMICS
 Route:: post('comic', [ControladorComic::class, 'store'])->name('comic.store');
 Route::get('comic/create',[ControladorComic::class,'create'])->name('comic.create');
+Route::get('comic',[ControladorComic::class,'index'])->name('comic.index');
+Route::put('comic/{id}',[ControladorComic::class,'update'])->name('comic.update');
+Route::delete('comic/{id}',[ControladorComic::class,'destroy'])->name('comic.destroy');
 
 //ALTA PROVEEDOR
 Route:: post('proveedor', [ControladorProveedor::class, 'store'])->name('proveedor.store');
 Route::get('proveedor/create',[ControladorProveedor::class,'create'])->name('proveedor.create');
+Route::get('proveedor',[ControladorProveedor::class,'index'])->name('proveedor.index');
+Route::put('proveedor/{id}',[ControladorProveedor::class,'update'])->name('proveedor.update');
+Route::delete('proveedor/{id}',[ControladorProveedor::class,'destroy'])->name('proveedor.destroy');
+
 
 //ALTA PEDIDO
 Route::post('guardarPedido',[ControladorPedidos::class,'store'])->name('guardarPedido');
