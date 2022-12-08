@@ -81,6 +81,10 @@ class ControladorArticulos2 extends Controller
             return redirect('compraexito')->with('n3'," ");
 
         }else{
+
+            $estadoe=DB::table('tb_venta')->where('id', $id)->where('estado','disponible')->get();
+        if($estadoe==null){
+            
             $cantidad_antigua = DB::table('tb_venta')->where('id', $id)->value('cantidad');
             $cantidad_nueva= $cantidad_antigua+$cant;
             DB::table('tb_venta')->where('id', $id)->update([
@@ -88,6 +92,31 @@ class ControladorArticulos2 extends Controller
                 "updated_at"=>Carbon::now(),
             ]);
             return redirect('compraexito')->with('carrito'," ");
+        }else{
+            $id=$request->input('id');
+            $cant3=$cant2-$cant;
+            DB::table('tb_venta')->insert([
+                "id"=>$request->input('id'),
+                "descripcion"=>$request->input('descripcion'),
+                "cantidad"=>$request->input('cantidad2'),
+                "precio"=>$request->input('precio'),
+                "tipo"=>"articulo",
+                "estado"=>"disponible",
+                "fecha"=>Carbon::now(),
+                "mes"=>$date,
+                "created_at"=>Carbon::now(),
+                "updated_at"=>Carbon::now(),
+            ]);
+            DB::table('tb_articulo')->where('idArticulo', $id)->update([
+          
+                "cantidad"=>$cant3,
+                "updated_at"=>Carbon::now(),
+            ]);
+
+            return redirect('compraexito')->with('carrito'," ");
+
+        }
+           
         }
        
         }
