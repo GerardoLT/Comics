@@ -25,6 +25,12 @@
 Compra Cancelada
     </p>
   </div>
+  @endif  @if(session()->has('n5'))
+  <div class="alert alert-success" role="alert" style="align-content: center">
+    <p style="text-align: center">
+Compra Realizada
+    </p>
+  </div>
   @endif
 
 

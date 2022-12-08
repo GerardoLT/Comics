@@ -23,6 +23,7 @@ class ControladorComic2 extends Controller
 
     public function store(Request $request)
     {  
+        $date=date("m");
       $id=$request->input('id');
        $venta=DB::table('tb_venta')->where('id', $id)->get();
        if($venta->first()==null){
@@ -48,6 +49,9 @@ class ControladorComic2 extends Controller
                 "cantidad"=>$request->input('cantidad2'),
                 "precio"=>$request->input('precio'),
                 "tipo"=>"comics",
+                "estado"=>"disponible",
+                "fecha"=>Carbon::now(),
+                "mes"=>$date,
                 "created_at"=>Carbon::now(),
                 "updated_at"=>Carbon::now(),
             ]);

@@ -106,8 +106,8 @@
         <td> <a href="{{route('proveedor.index')}}">Proveedores</a></td>
         <td> <a href="{{route('pedidos_catalogo')}}">Pedidos</a></td>
         <td> <a href="{{route('carrito.index')}}">Carrito</a></td>
+        <td> <a href="{{route('carrito.index2')}}">Ventas</a></td>
      
-        <td> <a >Ventas</a> </td>
 
         <td> <a href="RegistrarTrabajador">Trabajadores</a></td>
 

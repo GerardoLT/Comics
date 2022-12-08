@@ -34,7 +34,6 @@ Route::view('23','Editar_Comics')->name("23");;
 Route::view('24','Editar_Articulo')->name("24");
 //Route::view('12','Alta_Proveedor')->name("12");
 Route::view('13','Editar_Proveedor')->name("13");
-Route::view('32','Editar_Pedidos');
 Route::view('6','catalogo2');
 
 Route::view('correo','Correoingresar')->name("correo");
@@ -42,6 +41,7 @@ Route::post('correo.store',[ControladorCorreo::class,'store'])->name('correo.sto
 Route::view('Plantilla_1','Plantilla_1' )->name("pan");
 Route::view('compraexito','compraexito' )->name("pan2");
 Route::view('cancelarexito','cancelarexito' )->name("pan3");
+Route::view('Editar_Pedidos','Editar_Pedidos' )->name("pan32");
 
 
 //Route::post('AltaArticulo',[ControladorComics::class,'validacion1']);
@@ -72,7 +72,7 @@ Route::post('guardarPedido',[ControladorPedidos::class,'store'])->name('guardarP
 Route::get('pedidos_catalogo',[ControladorPedidos::class,'index'])->name('pedidos_catalogo');
 Route::post('dead/{id}',[ControladorPedidos::class,'destroy'])->name('dead');
 Route::post('PDF/{id}',[ControladorPedidos::class,'PDF'])->name('PDF');
-Route::get('PDF2',[ControladorCarrito::class,'PDF2'])->name('PDF2');
+Route::post('PDF2',[ControladorCarrito::class,'PDF2'])->name('PDF2');
 
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
 Route::post('Comics1',[ControladorComics::class,'validacion3']);
@@ -97,8 +97,12 @@ Route::get('VentasArticulos',function(){
 Route::get('VentasComics',function(){
     return view('VentasComics');
 })->name('VentComics');
+
+Route::get('Editar_Pedidos2/{id}',[ControladorPedidos::class,'update2'])->name('Editar_Pedidos2');
 Route::post('carrito.cancelar', [ControladorCarrito::class,'store'])->name('carrito.cancelar');
+Route::get('carrito.cancelar2', [ControladorCarrito::class,'store2'])->name('carrito.cancelar2');
 Route::get('carrito',[ControladorCarrito::class,'index'])->name('carrito.index');
+Route::get('carrito2',[ControladorCarrito::class,'index2'])->name('carrito.index2');
 Route::get('ventasArticulo',[ControladorArticulos2::class,'index'])->name('varticulo.index');
 Route::get('ventasArticulo3',[ControladorArticulos2::class,'index2'])->name('index.ventasA');
 Route:: get('ventascomic', [ControladorComic2::class, 'index'])->name('vcomic.index');
@@ -106,3 +110,5 @@ Route::post('ventascomic2', [ControladorComic2::class, 'store'])->name('ventasco
 Route::post('ventasArticulo2', [ControladorArticulos2::class,'store'])->name('ventasArticulo2');
 Route::get('ventasArticulo22',[ControladorArticulos::class,'index2'])->name('2varticulo.index');
 Route::put('pedido/{id}',[ControladorPedido::class,'update'])->name('pedido.update');
+Route::post('PDF3',[ControladorCarrito::class,'PDF3'])->name('PDF3');
+Route::post('PDF4',[ControladorCarrito::class,'PDF4'])->name('PDF4');

@@ -24,8 +24,15 @@
      
    
       
-        <th scope="row"><a href="{{route('PDF2')}}"><button type="button" class="btn btn-primary">Generar Tiket</button></a></th>
+        <th scope="row">
+          <a href="{{route('PDF2')}}"><button type="button" class="btn btn-primary">Generar Tiket</button></a>
+        </th>
+           <th scope="row">
+            <a href="{{route('carrito.cancelar2')}}"><button type="submit" class="btn btn-info fw-bold fst-italic">Confirmar Compra</button>
+            </a>
+        </th>
       <tr>
+       
 
   </table>
   <table style="align-content: center">
@@ -61,8 +68,7 @@
                 </form>
                 </th>
                 <th>
-                  <button type="submit" class="btn btn-info fw-bold fst-italic">Comprar</button>
-              
+                 
                 </th>
                 </tr>
           </tbody>

@@ -31,27 +31,27 @@ editado con exito
            Pedido
         </div>
         <div class="card-body">
-            <form action="guardarPedido" method="POST">  
+            <form action="{{route('pedido.update',$com->idpedido)}}">  
                 @csrf 
                 {!!method_field('PUT')!!} 
                 <p class="text-start"><label class="fs-4 fw-bolder">descripcion del producto:</label></p>
-                <input type="text" name="descripcion" class="form-control" value="{{old("descripcion")}}">
+                <input type="text" name="descripcion" class="form-control"  value="{{$com->descripcion}}">
                 <p class="text-danger">{{ $errors->first('descripcion') }}</p>
             <div class="form-row">
                 <div class="col">
                 <p class="text-start"><label class="fs-4 fw-bolder">cantidad:</label></p>
-                <input type="text" name="cantidad" class="form-control" value="{{old("cantidad")}}">
+                <input type="text" name="cantidad" class="form-control"  value="{{$com->cantidad}}">
                 <p class="text-danger">{{ $errors->first('cantidad') }}</p>
                 </div>
                 <div class="col">
                 <p class="text-start"><label class="fs-4 fw-bolder">Precio:</label></p>
-                <input type="text" name="Precio" class="form-control" value="{{old("Precio")}}">
+                <input type="text" name="Precio" class="form-control"  value="{{$com->precio}}">
                 <p class="text-danger">{{ $errors->first('Precio') }}</p>
                 </div>
                 <br>
                 <div class="col">
                   <p class="text-start"><label class="fs-4 fw-bolder">Provedor:</label></p>
-                  <input type="text" name="Provedor" class="form-control" value="{{old("Provedor")}}">
+                  <input type="text" name="Provedor" class="form-control"  value="{{$com->idproveedor}}">
                   <p class="text-danger">{{ $errors->first('Provedor') }}</p>
                   </div>
                 

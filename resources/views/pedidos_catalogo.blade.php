@@ -68,7 +68,7 @@
             <th scope="col">cantidad</th>
             <th scope="col">Precio</th>
             <th scope="col">fecha</th>
-            <th scope="col">Editar</th>
+     
             <th scope="col">Eliminar</th>
             <th scope="col">PDF</th>
             <th scope="col">correo</th>
@@ -80,7 +80,7 @@
               <th>{{$dato->cantidad}}</th>
               <th>{{$dato->precio}}</th>
               <th>{{$dato->fecha}}</th>
-            <th scope="col"><button type="button" class="btn btn-primary">Editar</button></th>
+        
             <th scope="row">
               <form action="{{route('dead',$dato->idpedido)}} " method="POST">
                 @csrf
