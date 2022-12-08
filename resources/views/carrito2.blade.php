@@ -24,37 +24,22 @@
 
     <tr>
      
-   
+    </th>
+    <th scope="row">
+     <form method="post" action="{{route('PDF3')}}">
+      @csrf 
+       <a ><button type="submit" class="btn btn-primary">Generar reporte del dia</button></a>
+     </form>
+
+   </th>
       
       <th scope="row">
         <form method="post" action="{{route('PDF4')}}">
           @csrf 
-        
-        <select class="form-select" aria-label="Default select example" name="mes">
-          <option selected>meses</option>
-          <option value="1">enero</option>
-          <option value="2">febrero</option>
-          <option value="3">marzo</option>
-          <option value="4">abril</option>
-          <option value="5">mayo</option>
-          <option value="6">junio</option>
-          <option value="7">julio</option>
-          <option value="8">agosto</option>
-          <option value="9">septiembre</option>
-          <option value="10">octubre</option>
-          <option value="11">noviembre</option>
-          <option value="12">diciembre</option>
-        </select>
+         
         <a ><button type="submit" class="btn btn-primary">Generar reporte del mes</button></a>
         </form>
-      </th>
-         <th scope="row">
-          <form method="post" action="{{route('PDF3')}}">
-            <input type="text" name="fecha">
-            <a ><button type="submit" class="btn btn-primary">Generar reporte del dia</button></a>
-          </form>
-
-        </th>
+    
     <tr>
         </a>
 

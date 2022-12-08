@@ -72,7 +72,7 @@ Route::post('guardarPedido',[ControladorPedidos::class,'store'])->name('guardarP
 Route::get('pedidos_catalogo',[ControladorPedidos::class,'index'])->name('pedidos_catalogo');
 Route::post('dead/{id}',[ControladorPedidos::class,'destroy'])->name('dead');
 Route::post('PDF/{id}',[ControladorPedidos::class,'PDF'])->name('PDF');
-Route::post('PDF2',[ControladorCarrito::class,'PDF2'])->name('PDF2');
+Route::get('PDF2',[ControladorCarrito::class,'PDF2'])->name('PDF2');
 
 Route::post('AltaArticulo2',[ControladorComics::class,'validacion2']);
 Route::post('Comics1',[ControladorComics::class,'validacion3']);

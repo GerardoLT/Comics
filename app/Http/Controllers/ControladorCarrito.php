@@ -70,16 +70,15 @@ class ControladorCarrito extends Controller
     public function PDF2()
     {
      
-        $datos=DB::table('tb_venta')->get();
+        $datos=DB::table('tb_venta')->where("estado","disponible")->get();
         $pdf =PDF::loadView('PDF2', compact("datos"));
         return $pdf->stream('tiket.pdf');
     
         
     }
     public function PDF3(Request $request)
-    {
-        $id=$request->input('fecha');
-        $datos=DB::table('tb_venta')->where("fecha",$id)->get();
+    {   $dia=date("Y-m-d");
+        $datos=DB::table('tb_venta')->where("fecha",$dia)->get();
         $pdf =PDF::loadView('PDF3', compact("datos"));
         return $pdf->stream('reporte de dia.pdf');
     
@@ -87,9 +86,9 @@ class ControladorCarrito extends Controller
     }
     public function PDF4(Request $request)
     {
-        $mes=$request->input('mes');
-        $datos=DB::table('tb_venta')->where("mes",$mes)->get();
-        $pdf =PDF::loadView('PDF4', compact("datos"));
+        $mes=date("m");
+        $dato=DB::table('tb_venta')->where("mes",$mes)->get();
+        $pdf =PDF::loadView('PDF4', compact("dato"));
         return $pdf->stream('reporte de mes.pdf');
     
         

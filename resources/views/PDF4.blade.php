@@ -9,9 +9,13 @@
 <body>
   <div style="align-content: center">
     <div class="container col-md-8 table table-hover">
-        <h1>Tiket</h1>
+        <h1>Reporte de ventas</h1>
         <table class="table">
-
+          @php
+            echo date("M")
+          @endphp
+           
+           
           <tr>
 
             <th scope="col">descripcion</th>
@@ -23,7 +27,7 @@
           </thead>
           <tbody>  
         
-          @foreach($datos as $art)
+          @foreach($dato as $art)
             <tr>
               <th scope="col">{{$art->descripcion}}</th>
               <th scope="col">{{$art->cantidad}}</th>
