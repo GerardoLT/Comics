@@ -12,10 +12,14 @@ use Carbon\Carbon;
 class ControladorPedidos extends Controller
 {
    
-    public function index()
+    public function index(Request $request)
+   
     {
-        $datos=DB::table('tb_pedido')->get();
-        return view("pedidos_catalogo",compact("datos") );
+        $buscar=$request->get('buscar');
+        $datos=DB::table('tb_pedido')->where('descripcion','like','%'.$buscar.'%')->get();
+        return view("pedidos_catalogo",compact("datos"),compact("buscar"));
+            
+      
     }
 
     public function create()

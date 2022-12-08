@@ -28,7 +28,7 @@ Alta con exito
     <h1 class="display-4 text-center mt-5 mb-5">ALTA</h1>
     <div class="card text-center mb-5 p-3 mb-2 bg-secondary text-white">
         <div class="card-header">
-            Comics
+           Pedido
         </div>
         <div class="card-body">
             <form action="guardarPedido" method="POST">  

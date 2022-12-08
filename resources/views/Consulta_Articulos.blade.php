@@ -26,6 +26,10 @@ Articulo eliminado
 </div>
 @endif
 <div class="container col-md-8 table table-hover">
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="buscar2">
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+  </form>
   <h1>Catalogo Articulos</h1>
   <table style="align-content: center">
 
@@ -52,9 +56,25 @@ Articulo eliminado
             <tr>
               <th scope="col">{{$art->Marca}}</th>
               <th scope="col">{{$art->PrecioVenta}}</th>
-              <th scope="col">{{$art->cantidad}}</th>
+              <th scope="col">
+           
+          
+          
+       
+
+                @if(($art->cantidad)==0)
+
+              <p style="color: red"> AGOTADO</p>
+                  @else 
+              
+                  {{$art->cantidad}}
+
+                @endif
+
+              </th>
               <th scope="col">{{$art->descripcion}}</th>
               <th>
+                
                 <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Editar_Articulo{{$art->idarticulo}}">
                 Editar
                 </button>

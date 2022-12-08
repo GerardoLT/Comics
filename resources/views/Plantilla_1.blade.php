@@ -94,20 +94,22 @@
         </td>    
         <td>
         </td>
-        <td> <input type="text"></td>
-        <td> <button class="btn ">Buscar</button></td>
+    
         <td>
         </td>
-        <td> <a href="4">Carrito</a> </td>
+       
       </tr>
       <tr class="col-lg-6">
 
-        <td> <a href="{{route('articulo.index')}}">Catalogo</a></td>
-        <td> <a href="VentasArticulos">Ventas</a></td>
+        <td> <a href="{{route('articulo.index')}}">inventario</a></td>
+        <td> <a href="{{route('varticulo.index')}}">Mostrador</a></td>
         <td> <a href="{{route('proveedor.index')}}">Proveedores</a></td>
-        <td> <a href="3">Pedidos</a></td>
+        <td> <a href="{{route('pedidos_catalogo')}}">Pedidos</a></td>
+        <td> <a href="{{route('carrito.index')}}">Carrito</a></td>
+     
+        <td> <a >Ventas</a> </td>
 
-        <td> <a href="RegistrarTrabajador">Alta Trabajador</a></td>
+        <td> <a href="RegistrarTrabajador">Trabajadores</a></td>
 
       </tr>
     </TABLE>

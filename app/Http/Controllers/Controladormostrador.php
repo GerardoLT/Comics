@@ -5,15 +5,11 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Http\Requests\Articulo_A;
 use DB;
-use Carbon\Carbon;
 
-class ControladorArticulos extends Controller
+class Controladormostrador
+ extends Controller
 {
-    public function index2()
-    {
-        $tablaAr2 = DB::table('tb_articulo')->get();
-        return view('VentasArticulos', compact('tablaAr2'));
-    }
+   
     public function index(Request $request)
     {
      

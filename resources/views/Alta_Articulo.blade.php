@@ -59,20 +59,15 @@ Alta con exito
             <input type="text" name="Cantidad" class="form-control" value="{{old("Cantidad")}}">
             <p class="text-danger">{{ $errors->first('Cantidad') }}</p>
             </div>
-            <div class="col">
-            <p class="text-start"><label class="fs-4 fw-bolder">Precio venta:</label></p>
-            <input type="text" name="Precio_venta" class="form-control" value="{{old("Precio_venta")}}">
-            <p class="text-danger">{{ $errors->first('Precio_venta') }}</p>
-            </div>   
+             
             </div> 
             <p class="text-start"><label class="fs-4 fw-bolder" >Descripcion:</label></p>
             <input type="text" name="Descripcion" class="form-control" value="{{old("Descripcion")}}">
             <p class="text-danger">{{ $errors->first('Descripcion') }}</p>
-            <br><div class="btn-group" role="group">
-                <p><label class="fs-4 fw-bolder">Proveedor:</label></p>
-                <input type="text" name="Proveedor" class="form-control" value="{{old("Proveedor")}}">
+            
+            <label class="form-label fs-4 fst-italic">Proveedor:</label>
+            <input type="text" name="Proveedor" class="form-control" value="{{old('idproveedor')}}">
             <p class="text-danger">{{ $errors->first('Proveedor') }}</p>
-            </div>
     
         </div>
         <div class="card-footer">

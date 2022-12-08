@@ -16,93 +16,62 @@
 <br>
 <!-- tablas -->
 <div class="container col-md-8 table table-hover" >
+  <h2>Carrito</h2>
+  <table class="table table-success table-striped">
 
-  <table style="align-content: center">
-     
-    <h1>Lista de compras - Carrito</h1>
-    <br>
-     
+
     <tr>
-          <th>
-              <table class="table">
-                  <tr>
-                  </tr>  
-                    <tr>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Cantidad</th>
-                      <th scope="col">precio</th>
-                      <th scope="col" style="background-color: red">Eliminar</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="col">spiderman N12</th>
-                      <th scope="col">2</th>
-                      <th scope="col">100</th>
-                      <th scope="col" style="background-color: red">Eliminar</th> </tr>
-                    <tr>
-                      <th scope="col">Batman N1 nueva generacion</th>
-                      <th scope="col">1</th>
-                      <th scope="col">200</th>
-                      <th scope="col" style="background-color: red">Eliminar</th>
-                  
-                    </tr>
-                    <tr>
-                   
-                  
-                    </tr>
-                  </tbody>
-                </table>
+     
+   
       
+        <th scope="row"><a href="{{route('PDF2')}}"><button type="button" class="btn btn-primary">Generar Tiket</button></a></th>
+      <tr>
+
+  </table>
+  <table style="align-content: center">
+
+    <tr>
+
+      <th>
+        <table class="table">
+
+          <tr>
+
+            <th scope="col">descripcion</th>
+            <th scope="col">cantidad</th>
+            <th scope="col"> precio </th>
+            <th scope="col"> tipo </th>
         
-       
-            </th>
-            <th>
-                <table class="table table-success table-striped"  >
-                  <tr>
-                         
-                            
-                    <th scope="row">total</th>
-                  
-                  <tr>
-                    <tr>
-                         
-                            
-                      <th scope="row">$300</th>
-                    
-                    <tr>
-                 
-                        <tr>
-                         
-                            
-                            <th scope="row"><button>confirmar compra</button></th>
-                          
-                          <tr>
-                            <tr>
-                         
-                            
-                              <th scope="row"><a href="tiket"><button>Imprimir tiket</button></a></th>
-                            
-                            <tr>
-                              <tr>
-                         
-                            
-                                <th scope="row"><button>canselar compra</button></th>
-                              
-                              <tr>
-                     
-                    </tr>
-                    <tr>
-                      
-                    </tr>
-              </table>
-    </th>
-           
+
           </tr>
-  
+          </thead>
+          <tbody>
+          @foreach($tabla as $art)
+            <tr>
+              <th scope="col">{{$art->descripcion}}</th>
+              <th scope="col">{{$art->cantidad}}</th>
+              <th scope="col"> {{$art->precio}}<th>
+                <th scope="col"> {{$art->tipo}}<th>
+                <form action="{{route('carrito.cancelar')}}" method="POST">  
+                  @csrf
+                  <input type="hidden" name="id" value=" {{$art->id}}"> 
+                  <input type="hidden" name="tipo" value=" {{$art->tipo}}">
+                <th>
+                  <button type="submit" class="btn btn-info fw-bold fst-italic">Cancelar</button>
+                </form>
+                </th>
+                <th>
+                  <button type="submit" class="btn btn-info fw-bold fst-italic">Comprar</button>
+              
+                </th>
+                </tr>
+          </tbody>
+        
+          @endforeach
+        </table>
 
-</table>
+ 
 
-  </div>
+</div>
 
 @stop

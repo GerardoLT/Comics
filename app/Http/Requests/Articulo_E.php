@@ -27,7 +27,6 @@ class Articulo_E extends FormRequest
       
 'Proveedor'=>'required',
 'Descripcion'=>'required',
-'Precio_venta'=>'required|int',
 'Cantidad'=>'required|int',
 'Precio_compra'=>'required|int',
 'fecha'=>'required',

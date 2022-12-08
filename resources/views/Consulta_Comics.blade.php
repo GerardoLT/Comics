@@ -26,6 +26,10 @@ Comic eliminado
 </div>
 @endif
 <div class="container col-md-8 table table-hover">
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="buscar3">
+    <button class="btn btn-outline-success" type="submit">buscar</button>
+  </form>
   <h1>Catalogo Comics</h1>
   <table style="align-content: center">
 
@@ -52,7 +56,18 @@ Comic eliminado
             <tr>
               <th scope="col">{{$com->nombre}}</th>
               <th scope="col">{{$com->precioVenta}}</th>
-              <th scope="col">{{$com->cantidad}}</th>
+              <th scope="col">
+              
+                @if(($com->cantidad)==0)
+
+                <p style="color: red"> AGOTADO</p>
+                    @else 
+                
+                    {{$com->cantidad}}
+  
+                  @endif
+    
+              </th>
               <th scope="col">{{$com->edicion}}</th>
               <th>
                 <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#Editar_Comics{{$com->idcomic}}">

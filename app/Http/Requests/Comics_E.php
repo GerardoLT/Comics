@@ -27,7 +27,6 @@ class Comics_E extends FormRequest
       
 'Proveedor'=>'required',
 'Edicion'=>'required',
-'Precio_venta'=>'required|int',
 'Cantidad'=>'required|int',
 'Precio_compra'=>'required|int',
 'Fecha'=>'required',

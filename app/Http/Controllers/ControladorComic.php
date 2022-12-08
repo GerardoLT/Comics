@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Http\Requests\Comics_A;
 use DB;
@@ -10,15 +10,18 @@ use Carbon\Carbon;
 class ControladorComic extends Controller
 {
    
-    public function index()
+    public function index(Request $request)
     {
-        $tablaCo = DB::table('tb_comic')->get();
-        return view('Consulta_Comics', compact('tablaCo'));
+        $buscar3=$request->get('buscar3');
+        $tablaCo=DB::table('tb_comic')->where('nombre','like','%'.$buscar3.'%')->get();
+        return view('Consulta_Comics', compact('tablaCo'),compact("buscar3"));
     }
 
     public function create()
     {
-        return view('Alta_Comics');
+        $tablaAr = DB::table('tb_proveedor')->get();
+        return view('Alta_Comics', compact('tablaAr'));
+       
     }
 
     public function store(Comics_A $request)

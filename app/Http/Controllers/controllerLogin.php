@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class controllerLogin extends Controller
 {
     function PostLogin(validatorLogin $req){
-        return redirect()->route('VentArticulos')->with('exito', 'Paso');
+        return redirect()->route('pan')->with('exito', 'Paso');
     }
     function PostSignUp(ValidatorSignUp $req){
         return redirect()->route('Signin')->with('exito', 'Paso');

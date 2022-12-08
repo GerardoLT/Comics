@@ -50,11 +50,7 @@ Alta con exito
                     <input type="text" name="Compañia" class="form-control" value="{{old("Compañia")}}">
                     <p class="text-danger">{{ $errors->first('Compañia') }}</p>
                 </div>
-                <div class="col">
-                <p class="text-start"><label class="fs-4 fw-bolder">Precio Venta:</label></p>
-                <input type="text" name="Precio_venta" class="form-control" value="{{old("Precio_venta")}}">
-                <p class="text-danger">{{ $errors->first('Precio_venta') }}</p>
-                </div>   
+          
             </div>    
             <div class="form-row">
             <div class="col">
@@ -69,10 +65,9 @@ Alta con exito
             </div>   
             </div> 
             <br>
-            <p class="text-start"><label class="fs-4 fw-bolder">Proveedor:</label></p>
-            <input type="text" name="Proveedor" class="form-control" value="{{old("Proveedor")}}">
+            <label class="form-label fs-4 fst-italic">Proveedor:</label>
+            <input type="text" name="Proveedor" class="form-control" value="{{old('idproveedor')}}">
             <p class="text-danger">{{ $errors->first('Proveedor') }}</p>
-          
     
         </div>
         <div class="card-footer">
